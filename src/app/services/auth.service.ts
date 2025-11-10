@@ -15,7 +15,7 @@ interface LoginResponse {
 })
 export class AuthService {
   private currentUser = signal<User | null>(null);
-  private apiUrl = 'http://localhost:5159/api/auth';
+  private apiUrl = 'digilocker-angular.vercel.app';
   
   public user = this.currentUser.asReadonly();
   public isAuthenticated = computed(() => this.currentUser() !== null);
